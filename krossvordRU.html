@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новогодний кроссворд</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #d32f2f;
+    }
+    .crossword-grid {
+      display: inline-block;
+      border: 2px solid #333;
+      margin: 20px auto;
+    }
+    .crossword-grid div {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #999;
+      display: inline-block;
+      line-height: 30px;
+      text-align: center;
+      font-weight: bold;
+      background-color: white;
+    }
+    .black {
+      background-color: #333;
+    }
+    .word-list {
+      margin-top: 30px;
+      text-align: left;
+      display: inline-block;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .word-list h2 {
+      color: #1976d2;
+    }
+    .word-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .word-list li {
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Новогодний кроссворд 🎄</h1>
+
+  <div class="crossword-grid" id="grid"></div>
+
+  <div class="word-list">
+    <h2>Слова в кроссворде:</h2>
+    <ul>
+      <li>1. Салют</li>
+      <li>2. Хлопушки</li>
+      <li>3. Мандарины</li>
+      <li>4. Ёлка</li>
+      <li>5. Снег</li>
+      <li>6. Шампанское</li>
+      <li>7. Подарки</li>
+      <li>8. Веселье</li>
+      <li>9. Дед Мороз</li>
+      <li>10. Олени</li>
+    </ul>
+  </div>
+
+  <script>
+    // Размер сетки: 15x15
+    const size = 15;
+    const grid = Array(size).fill().map(() => Array(size).fill(''));
+
+    // Слова и их позиции: [слово, направление (0=горизонтально, 1=вертикально), строка, столбец]
+    const words = [
+      ['САЛЮТ', 0, 0, 5],
+      ['ХЛОПУШКИ', 0, 2, 3],
+      ['МАНДАРИНЫ', 0, 4, 2],
+      ['ЁЛКА', 1, 1, 7],
+      ['СНЕГ', 1, 0, 10],
+      ['ШАМПАНСКОЕ', 0, 7, 1],
+      ['ПОДАРКИ', 1, 1, 12],
+      ['ВЕСЕЛЬЕ', 0, 10, 4],
+      ['ДЕД МОРОЗ', 0, 12, 2], // Пробел заменён на символ, но в сетке без пробела
+      ['ОЛЕНИ', 1, 6, 9]
+    ];
+
+    // Добавим слова в сетку
+    words.forEach(([word, dir, row, col]) => {
+      const cleanWord = word.replace(/\s/g, ''); // Убираем пробелы для размещения в сетке
+      if (dir === 0) { // горизонтально
+        for (let i = 0; i < cleanWord.length; i++) {
+          if (col + i < size) grid[row][col + i] = cleanWord[i];
+        }
+      } else { // вертикально
+        for (let i = 0; i < cleanWord.length; i++) {
+          if (row + i < size) grid[row + i][col] = cleanWord[i];
+        }
+      }
+    });
+
+    // Создание HTML-сетки
+    const gridContainer = document.getElementById('grid');
+    for (let r = 0; r < size; r++) {
+      for (let c = 0; c < size; c++) {
+        const cell = document.createElement('div');
+        if (grid[r][c] === '') {
+          cell.classList.add('black');
+        } else {
+          cell.textContent = grid[r][c];
+        }
+        gridContainer.appendChild(cell);
+      }
+    }
+  </script>
+</body>
+</html>
