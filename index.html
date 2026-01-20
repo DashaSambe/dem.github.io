@@ -57,8 +57,15 @@
 <body>
   <header>
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Мой блог</title>
 
-<style>
+  <!-- Подключаем шрифт -->
+  <style>
     @font-face {
       font-family: 'Pudelinka';
       src: url('fonts/pudelinka.ttf') format('truetype');
@@ -66,12 +73,24 @@
       font-style: normal;
     }
 
+    /* Применяем шрифт ко ВСЕМУ тексту */
+    * {
+      font-family: 'Pudelinka', cursive, sans-serif !important;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Привет!</h1>
+  <p>Этот текст теперь отображается шрифтом Pudelinka.</p>
+
+</body>
+</html>
 
    
 
  
 
-</html>
 
   <blockquote class="q">Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
   <a href="mailto:dashasambe@gmail.com">Напишите мне</a>
