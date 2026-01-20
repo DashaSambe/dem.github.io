@@ -56,27 +56,19 @@
 </head>
 <body>
   <header>
-    <h1>Мой блог</h1>
-  </header>
-  <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <style>
-    @font-face {
-      font-family: 'Pudelinka';
-      src: url('fonts/pudelinka.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
 
-    
-    * {
-      font-family: 'Pudelinka', cursive, sans-serif !important;
-    }
-  </style>
-</head>
-<body>
- 
+  @font-face {
+  font-family: 'Pudelinka';
+  src: url('{{ "/fonts/pudelinka.ttf" | relative_url }}') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Pudelinka', cursive, sans-serif;
+}
+
+   
 
  
 
