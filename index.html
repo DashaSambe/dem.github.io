@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- 
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>МОЙ БЛОГ</title>
- <h1>МОЙ БЛОГ</h1>
- 
-  <!-- Подключаем внешние стили -->
-  <link type="text/css" rel="stylesheet" href="style.css">
   <style>
-    /* Базовые стили на случай, если style.css недоступен */
+    @font-face {
+      font-family: 'Pudelinka';
+      src: url('fonts/pudelinka.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
     body {
-      background-color: #fff9f0; /* Светло-кремовый фон */
-      color: #2e1a0f;           /* Тёмно-коричневый текст */
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Pudelinka', cursive, sans-serif;
+      background-color: #fff9f0;
+      color: #2e1a0f;
       line-height: 1.6;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
-
     h1, h2 {
-      color: #c13e3e; /* Тёплый красный для заголовков */
+      color: #c13e3e;
     }
-
     blockquote.q, blockquote {
-      background-color: #ffe0b2; /* Мягкий оранжевый фон */
+      background-color: #ffe0b2;
       border-left: 4px solid #ff7043;
       padding: 12px 16px;
       margin: 16px 0;
       font-style: italic;
     }
-
     a {
       color: #1a73e8;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     img {
       max-width: 100px;
       height: auto;
@@ -57,60 +53,31 @@
   </style>
 </head>
 <body>
-  <header>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Мой блог</title>
-
-  <style>
-    @font-face {
-      font-family: 'Pudelinka';
-      src: url('fonts/pudelinka.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    /* Применяем шрифт ко ВСЕМУ тексту */
-    * {
-      font-family: 'Pudelinka', cursive, sans-serif !important;
-    }
-  </style>
-</head>
-<body>
-</body>
-</html>
+  <h1>МОЙ БЛОГ</h1>
   <blockquote class="q">Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
-  <a href="mailto:dashasambe@gmail.com">Напишите мне</a>
-  </head>
-<body>
-    <h2>20 января, 2026</h2>
-<p>Открытый ключ: (e = 3, n = 33)</p>
-<p>Закрытый ключ: (d = 7, n = 33)</p>
- <p> реальное n=15234789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567...... </p>
-  
-    <h2>17 января, 2026</h2>
+  <p><a href="mailto:dashasambe@gmail.com">Напишите мне</a></p>
+ 
+  <h2>20 января, 2026</h2>
+  <p>Открытый ключ: (e = 3, n = 33)</p>
+  <p>Закрытый ключ: (d = 7, n = 33)</p>
+  <p>реальное n=15234789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567......</p>
 
-    <p>Открытый текст АПЕЛЬСИН — шифротекст  САЦЬНВЩЮ k=17</p>
-    <p>Открытый текст АБРИКОС — шифротекст ЫЬЛГЕЙМ k=27</p>
-    <p>ФХНЗКЧ — ПРИВЕТ k=5</p>
-    <p>ЦЩЕБФ — ВЕСНА k=20</p>
- <p> Открытый текст САМБЕТОВА —  шифротекст ЫКЦЛПЬШМК k=10</p>
+  <h2>17 января, 2026</h2>
+  <p>Открытый текст АПЕЛЬСИН — шифротекст САЦЬНВЩЮ k=17</p>
+  <p>Открытый текст АБРИКОС — шифротекст ЫЬЛГЕЙМ k=27</p>
+  <p>ФХНЗКЧ — ПРИВЕТ k=5</p>
+  <p>ЦЩЕБФ — ВЕСНА k=20</p>
+  <p>Открытый текст САМБЕТОВА — шифротекст ЫКЦЛПЬШМК k=10</p>
+
   <h2>13 января, 2026</h2>
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Структура домена</title></head><body><h1>Домен</h1><p>Домен <code>dashasambe.github.io</code> состоит из: корневого домена (<code>.</code>, не отображается), домена верхнего уровня <code>.io</code>, домена второго уровня <code>github.io</code> и поддомена третьего уровня <code>dashasambe</code>. Часть <code>/dem.github.io/</code> — это путь, а не домен.</p></body></html>
+  <h1>Домен</h1>
+  <p>Домен <code>dashasambe.github.io</code> состоит из: корневого домена (<code>.</code>, не отображается), домена верхнего уровня <code>.io</code>, домена второго уровня <code>github.io</code> и поддомена третьего уровня <code>dashasambe</code>. Часть <code>/dem.github.io/</code> — это путь, а не домен.</p>
+
   <h2>19 декабря, 2025</h2>
-  <p>
-    <a href="колядка.docx" download>Поздравление с Рождеством 2026 (Скачать колядку)</a>
-  </p>
-  <p>
-    <a href="019b3566-7af8-7063-a910-99155174b5cd.mp4" target="_blank">Поздравление с Рождеством 2026</a>
-  </p>
+  <p><a href="колядка.docx" download>Поздравление с Рождеством 2026 (Скачать колядку)</a></p>
+  <p><a href="019b3566-7af8-7063-a910-99155174b5cd.mp4" target="_blank">Поздравление с Рождеством 2026</a></p>
   <p>
     <video src="019b3566-7af8-7063-a910-99155174b5cd.mp4" width="640" controls>
-      Ваш браузер не поддерживает воспроизведение видео.
       <a href="019b3566-7af8-7063-a910-99155174b5cd.mp4">Поздравление с Рождеством 2026</a>.
     </video>
   </p>
@@ -120,9 +87,7 @@
   <p>Поздравление с Наступающим 2026 годом читайте <a href="Congratulations2026.html">здесь</a>.</p>
 
   <h2>15 октября, 2025</h2>
-  <p>
-    Я сделала Новогодние кроссворды для сайта <a href="http://адрес-сайта-друга" title="Блог моего друга">Сайт моего друга</a>.
-  </p>
+  <p>Я сделала Новогодние кроссворды для сайта <a href="http://адрес-сайта-друга" title="Блог моего друга">Сайт моего друга</a>.</p>
 
   <h2>1 сентября, 2025</h2>
   <blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
